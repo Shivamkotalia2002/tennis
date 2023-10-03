@@ -22,7 +22,7 @@ const playerSchema = new mongoose.Schema({
         required:true
     },
     PartnerName: {
-        type:String,
+        type:String
     },
     dinner: {
         type:String,
@@ -33,7 +33,7 @@ const playerSchema = new mongoose.Schema({
         required:true
     },
     partnerCode: {
-        type:String,
+        type:String
     }
 })
 
