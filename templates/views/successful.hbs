@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #ffffff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .partner-code {
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Congratulations!</h1>
+        <p>You are successfully registered for this event.</p>
+
+        <!-- JavaScript to check and display the partner code -->
+        <p id="partnerCode"></p>
+
+        <script>
+            function generateTeamCode() {
+                const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                const codeLength = 4;
+                let teamCode = 'TEAM';
+
+                for (let i = 0; i < codeLength; i++) {
+                    const randomIndex = Math.floor(Math.random() * characters.length);
+                    teamCode += characters.charAt(randomIndex);
+                }
+
+                return teamCode;
+            }
+
+            // Example usage:
+            const teamCode = generateTeamCode();
+            // Assume the partnerCode variable contains the partner's code
+            if (partnerCode) {
+                var partnerCodeElement = document.getElementById("partnerCode");
+                partnerCodeElement.innerHTML = "Your partner code: <span class='partner-code'>" + teamCode + "</span>";
+            }
+        </script>
+    </div>
+</body>
+
+</html>
